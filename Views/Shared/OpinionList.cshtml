@@ -1,0 +1,48 @@
+﻿@model List<TPLOCAL1.Models.Opinion>
+@{
+    Layout = null;
+}
+<!Doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <title>Liste des avis</title>
+    <link rel="stylesheet" href="~/resources/Index.css" />
+</head>
+<body>
+<header>
+    <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
+    <h1>Liste des avis</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="/Home/Index">Accueil</a></li>
+        <li><a href="/Home/Index/Form">Formulaire</a></li>
+    </ul>
+</nav>
+    <section>
+        <table>
+            <tr>
+                <td colspan="3" class="title-row">Liste</td>
+            </tr>
+            <tr>
+                <td>Nom</td>
+                <td>Prénom</td>
+                <td>Avis donné</td>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                bool isOui = (item.OpinionGiven == "O" || item.OpinionGiven == "Y");
+                <tr>
+                    <td>@item.LastName</td>
+                    <td>@item.FirstName</td>
+                    <td class="@(isOui ? "status-oui" : "status-non")">
+                        @(isOui ? "Oui" : "Non")
+                    </td>
+                </tr>
+            }
+        </table>
+</section>
+</body>
+</html>

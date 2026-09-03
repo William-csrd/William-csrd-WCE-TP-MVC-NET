@@ -1,0 +1,82 @@
+﻿/* Style de base pour la page*/
+
+.image {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+h1 {
+    margin-right: 170px;
+    margin-left: 170px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+Nav {
+    width: 150px;
+    border: 2px solid #8c014c;
+    background-color: #8c014c;
+    color: white;
+    float: left;
+}
+
+li {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+a {
+    color: chocolate;
+}
+
+section {
+    margin-left: 170px;
+    }
+
+
+/* Style pour les tableaux */
+
+.title-row {
+    text-align: center;
+    font-weight: normal;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    }
+
+table {
+    border-collapse: collapse;
+    width: auto;
+    table-layout: fixed;
+    margin-bottom: 15px;
+}
+
+ td {
+    border: 1px solid black;
+    font-size: 1.05em;
+}
+
+.field-validation-error {
+    color: red;
+    padding: 2px 5px;
+    margin-left: 5px;
+}
+
+
+/*Style pour les statuts d'avis*/
+
+.status-oui {
+    background-color: green;
+    color: black;
+    text-align: center;
+}
+
+.status-non {
+    background-color: red;
+    color: black;
+    text-align: center;
+}
+
